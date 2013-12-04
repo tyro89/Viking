@@ -2,6 +2,18 @@
 
 jRuby hdfs wrapper attempting to provide an interface that's similar to the common ruby file system api's.
 
+## Status
+
+### Not available (in order of priority)
+
+ - Dir
+ - FileUtils
+ - FileStat
+
+### Available
+
+ - File
+
 ## Example usage
 
     # Set up hdfs config
