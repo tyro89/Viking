@@ -4,15 +4,15 @@ jRuby hdfs wrapper attempting to provide an interface that's similar to the comm
 
 ## Status
 
-### Not available (in order of priority)
+### Available
+
+ - File
+
+### Not available yet
 
  - Dir
  - FileUtils
  - FileStat
-
-### Available
-
- - File
 
 ## Example usage
 
