@@ -1,6 +1,12 @@
 # Viking
 
-jRuby hdfs wrapper attempting to provide an interface that's similar to the common ruby file system api's.
+A familiar jRuby hdfs wrapper.
+
+## Goal
+
+The goal is to provide ways that are similar to the common ruby file system
+api's for interacting with hdfs. At it cores all functionallity is powered by
+the core java hdfs classes.
 
 ## Status
 
@@ -35,3 +41,8 @@ jRuby hdfs wrapper attempting to provide an interface that's similar to the comm
         Viking::File.rename(path, "/some/dir")
       end
     end
+
+    # Print the current hdfs working directory and create a new tmp folder.
+    puts Viking::Dir.pwd
+    Viking::Dir.mkdir("/tmp")
+
