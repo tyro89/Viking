@@ -27,7 +27,7 @@ jRuby hdfs wrapper attempting to provide an interface that's similar to the comm
     path = "/some/data"
     if Viking::File.exists? path
       if Viking::File.file? path
-        Viking::File.open("/some/data") do |file|
+        Viking::File.open(path) do |file|
           puts "Reading data from #{f.path}:"
           puts f.read
         end
