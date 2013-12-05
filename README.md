@@ -30,8 +30,8 @@ hdfs classes.
       port: 54310
     })
 
-    # If "/some/data" exists then print the content if it is a file
-    # or otherwise rename it if it's a directory.
+    # If "/some/data" exists then print its content. If it is a directory
+    # then rename it. If it does not exist then we create it.
     path = "/some/data"
     if Viking::File.exists? path
       if Viking::File.file? path
@@ -42,9 +42,7 @@ hdfs classes.
       else
         Viking::File.rename(path, "/some/dir")
       end
+    else
+      Viking::Dir.mkdir(path)
     end
-
-    # Print the current hdfs working directory and create a new tmp folder.
-    puts Viking::Dir.pwd
-    Viking::Dir.mkdir("/tmp")
 
