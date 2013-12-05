@@ -11,11 +11,8 @@ end
 
 task :prepare do
   require 'lock_jar'
-
   LockJar.lock
-
   lockfile = File.expand_path( "../Jarfile.lock", __FILE__ )
-
   LockJar.install( :lockfile => lockfile )
 end
 
