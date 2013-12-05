@@ -7,10 +7,10 @@ jRuby hdfs wrapper attempting to provide an interface that's similar to the comm
 ### Available
 
  - File
+ - Dir
 
 ### Not available yet
 
- - Dir
  - FileUtils
  - FileStat
 

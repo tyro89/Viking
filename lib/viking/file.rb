@@ -29,7 +29,7 @@ module Viking
     def self.delete(*file_names)
       file_names.each do |file_name|
         path = Path.new(file_name)
-        if Viking.client.is_file(path)
+        if file?(file_name)
           Viking.client.delete(Path.new(file_name), false)
         else
           raise IOError, "File::delete can only delete files. Attempted to delete directory #{file_name}."
@@ -63,7 +63,7 @@ module Viking
     end
 
     def self.open(file_name, &block)
-      file = File.new(file_name)
+      file = Viking::File.new(file_name)
       if block
         value = yield file
         file.close unless file.closed?
