@@ -12,13 +12,15 @@ the core java hdfs classes.
 
 ### Available
 
- - File
- - Dir
+ - `File`
+ - `Dir`
 
-### Not available yet
+### Not available yet but on the todo
 
- - FileUtils
- - FileStat
+ - `FileUtils`
+ - `File#fnmatch`
+ - `File#fnmatch?`
+ - `Dir#glob`
 
 ## Example usage
 
