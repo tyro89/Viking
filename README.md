@@ -6,7 +6,7 @@ A familiar jRuby hdfs wrapper.
 
 The goal is to provide ways that are similar to the common ruby file system
 api's for interacting with hdfs. At it cores all functionallity is powered by
-the core java hdfs classes.
+the java hdfs classes.
 
 ## Status
 
