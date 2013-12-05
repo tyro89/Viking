@@ -30,8 +30,8 @@ hdfs classes.
       port: 54310
     })
 
-    # If "/some/data" exists then print its content. If it is a directory
-    # then rename it. If it does not exist then we create it.
+    # If "/some/data" exists and it is a file then print its content. If it is
+    # a directory then rename it. If it does not exist then we create it.
     path = "/some/data"
     if Viking::File.exists? path
       if Viking::File.file? path
