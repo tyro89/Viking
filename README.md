@@ -14,13 +14,14 @@ hdfs classes.
 
  - `File`
  - `Dir`
+ - `FileUtils`
 
 ### Not available yet but on the todo
 
- - `FileUtils`
  - `File#fnmatch`
  - `File#fnmatch?`
  - `Dir#glob`
+ - `FileUtils#copy`
 
 ## Example usage
 

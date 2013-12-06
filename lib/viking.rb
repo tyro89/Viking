@@ -29,3 +29,4 @@ end
 require "viking/version"
 require 'viking/file'
 require 'viking/dir'
+require 'viking/fileutilz'
