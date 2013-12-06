@@ -12,7 +12,7 @@ java_import org.apache.hadoop.fs.permission.FsPermission
 module Viking
 
   def self.configure(config)
-    hostname = config[:hostname]
+    hostname = config[:host]
     port     = config[:port]
 
     path = URI.new("hdfs://#{hostname}:#{port}")
