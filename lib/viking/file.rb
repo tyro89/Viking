@@ -171,15 +171,16 @@ module Viking
     end
 
     def puts(*objs)
-      sep_byte = "\n".bytes.first
-      objs.each do |line|
-        last_byte = nil
-        line.bytes.each do |byte|
-          putc(byte)
-          last_byte = byte
+      separator = "\n"
+      string    = objs.reduce("") do |acc, obj|
+        if obj.end_with?(separator)
+          acc << obj
+        else
+          acc << obj
+          acc << separator
         end
-        writter.write(sep_byte) unless last_byte == sep_byte
       end
+      write(string)
     end
 
     def read(limit=nil)
@@ -187,9 +188,7 @@ module Viking
     end
 
     def write(string)
-      string.bytes.each do |byte|
-        putc(byte)
-      end
+      writter.write_bytes(string)
     end
 
     private

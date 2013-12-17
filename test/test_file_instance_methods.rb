@@ -124,7 +124,7 @@ class TestFileInstanceMethods < MiniTest::Unit::TestCase
 
   def test_puts
     f = file1
-    f.puts("foo", "bar", "biz")
+    f.puts("foo", "bar\n", "biz")
     f.close
     assert File.read(TEST_FILE_PATH_1) == "foo\nbar\nbiz\n"
   end
