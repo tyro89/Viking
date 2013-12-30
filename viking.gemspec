@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'viking/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "viking"
+  spec.name          = "hdfs-viking"
   spec.version       = Viking::VERSION
   spec.authors       = ["Erik Selin"]
   spec.email         = ["erik.selin@jadedpixel.com"]
