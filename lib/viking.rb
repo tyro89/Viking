@@ -2,14 +2,14 @@ require "lock_jar"
 
 LockJar.load
 
-java_import java.net.URI
-java_import org.apache.hadoop.fs.FileSystem
-java_import org.apache.hadoop.hdfs.DistributedFileSystem
-java_import org.apache.hadoop.conf.Configuration
-java_import org.apache.hadoop.fs.Path
-java_import org.apache.hadoop.fs.permission.FsPermission
-
 module Viking
+
+  java_import java.net.URI
+  java_import org.apache.hadoop.fs.FileSystem
+  java_import org.apache.hadoop.hdfs.DistributedFileSystem
+  java_import org.apache.hadoop.conf.Configuration
+  java_import org.apache.hadoop.fs.Path
+  java_import org.apache.hadoop.fs.permission.FsPermission
 
   def self.configure(config)
     hostname = config[:host]
