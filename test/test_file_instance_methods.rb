@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'minitest/autorun'
 require 'minitest/pride'
 require File.expand_path('../../lib/viking.rb', __FILE__)
@@ -138,5 +140,12 @@ class TestFileInstanceMethods < MiniTest::Unit::TestCase
     f.write("foobar")
     f.close
     assert File.read(TEST_FILE_PATH_1) == "foobar"
+  end
+
+  def test_write_special_stuff
+    f = file1
+    f.write("fo设计欣赏r")
+    f.close
+    assert File.read(TEST_FILE_PATH_1) == "fo设计欣赏r"
   end
 end

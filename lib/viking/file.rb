@@ -94,7 +94,7 @@ module Viking
     def initialize(file_name)
       @path     = file_name
       @reading  = false
-      @writting = false
+      @writing = false
       @closed   = false
     end
 
@@ -109,10 +109,10 @@ module Viking
     def close
       unless closed?
         reader.close  if @reading
-        writter.close if @writting
+        writer.close if @writing
 
         @reading  = false
-        @writting = false
+        @writing = false
 
         @closed = true
       end
@@ -163,10 +163,10 @@ module Viking
 
     def putc(obj)
       if obj.is_a? Numeric
-        writter.java_send :write, [Java::int], obj
+        writer.java_send :write, [Java::int], obj
       else
         byte = obj.to_s.bytes.first
-        writter.write(byte)
+        writer.write(byte)
       end
     end
 
@@ -188,7 +188,9 @@ module Viking
     end
 
     def write(string)
-      writter.write_bytes(string)
+      string.bytes.each do |b|
+        writer.write_byte(b)
+      end
     end
 
     private
@@ -214,9 +216,9 @@ module Viking
       end
     end
 
-    def writter
-      @writter ||= begin
-        @writting = true
+    def writer
+      @writer ||= begin
+        @writing = true
         Viking.client.create(Path.new(path))
       end
     end
