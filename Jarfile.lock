@@ -1,5 +1,5 @@
 ---
-version: 0.7.5
+version: 0.8.0
 groups:
   default:
     dependencies:
@@ -31,7 +31,7 @@ groups:
     - javax.servlet.jsp:jsp-api:jar:2.1
     - javax.servlet:servlet-api:jar:2.5
     - javax.xml.bind:jaxb-api:jar:2.2.2
-    - jline:jline:jar:0.9.94
+    - jline:jline:jar:2.2
     - junit:junit:jar:4.8.2
     - log4j:log4j:jar:1.2.17
     - net.java.dev.jets3t:jets3t:jar:0.6.1
