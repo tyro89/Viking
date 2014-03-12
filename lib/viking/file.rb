@@ -188,6 +188,11 @@ module Viking
     end
 
     def write(string)
+      writer.write(string.to_java_bytes)
+    end
+
+    # FIXME (ps) this is just here for the benchmark
+    def old_write(string)
       string.bytes.each do |b|
         writer.write_byte(b)
       end
