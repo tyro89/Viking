@@ -1,5 +1,6 @@
+language: ruby
 script: "bundle exec rake prepare test"
 jdk:
   - openjdk6
 rvm:
-  - jruby
+  - jruby-19mode
