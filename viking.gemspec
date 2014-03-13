@@ -12,8 +12,9 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{jruby hdfs wrapper}
   spec.homepage      = ""
   spec.license       = "MIT"
+  spec.homepage      = "https://github.com/tyro89/Viking/"
 
-  spec.extensions    = ["Rakefile"]
+  spec.extensions    = ["ext/mkrf_conf.rb"]
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
