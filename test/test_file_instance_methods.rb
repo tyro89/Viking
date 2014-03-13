@@ -148,14 +148,4 @@ class TestFileInstanceMethods < MiniTest::Unit::TestCase
     f.close
     assert File.read(TEST_FILE_PATH_1) == "fo设计欣赏r"
   end
-
-  def test_write_special_stuff_benchmark
-    f = file1
-    s = "fo设计欣赏rfo设计欣赏rfo设计欣赏r"
-    require 'benchmark'
-    Benchmark.bm do |x|
-      x.report('owrite') { 1000000.times { f.old_write(s) } }
-      x.report('nwrite') { 1000000.times { f.write(s) } }
-    end
-  end
 end

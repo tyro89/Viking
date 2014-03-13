@@ -191,13 +191,6 @@ module Viking
       writer.write(string.to_java_bytes)
     end
 
-    # FIXME (ps) this is just here for the benchmark
-    def old_write(string)
-      string.bytes.each do |b|
-        writer.write_byte(b)
-      end
-    end
-
     private
 
     def parse_byte(b)
