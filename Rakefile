@@ -9,10 +9,7 @@ Rake::TestTask.new do |t|
 end
 
 task :prepare do
-  require 'lock_jar'
-  LockJar.lock
-  lockfile = File.expand_path( "../Jarfile.lock", __FILE__ )
-  LockJar.install( :lockfile => lockfile )
+  load(File.expand_path("ext/mkrf_conf.rb", File.dirname(__FILE__)))
 end
 
-task :default => [:prepare]
+task :default => :test
