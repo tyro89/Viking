@@ -1,3 +1,5 @@
 script: "bundle exec rake prepare test"
+jdk:
+  - oraclejdk7
 rvm:
   - jruby
