@@ -3,7 +3,7 @@ module Viking
 
     def self.absolute_path(file_name, dir_string=Viking.client.get_working_directory)
       dir_string = dir_string.to_s.sub(/[^\/]*:\/*\//, '/')
-      IO::File.absolute_path(file_name, dir_string)
+      ::File.absolute_path(file_name, dir_string)
     end
 
     def self.basename(file_name, suffix = nil)
@@ -188,9 +188,7 @@ module Viking
     end
 
     def write(string)
-      string.bytes.each do |b|
-        writer.write_byte(b)
-      end
+      writer.write(string.to_java_bytes)
     end
 
     private

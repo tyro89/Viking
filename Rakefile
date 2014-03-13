@@ -15,4 +15,4 @@ task :prepare do
   LockJar.install( :lockfile => lockfile )
 end
 
-task :default => :prepare
+task :default => [:prepare]

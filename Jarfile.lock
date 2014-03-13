@@ -1,5 +1,5 @@
 ---
-version: 0.7.5
+version: 0.8.0
 groups:
   default:
     dependencies:
@@ -31,7 +31,7 @@ groups:
     - javax.servlet.jsp:jsp-api:jar:2.1
     - javax.servlet:servlet-api:jar:2.5
     - javax.xml.bind:jaxb-api:jar:2.2.2
-    - jline:jline:jar:0.9.94
+    - jline:jline:jar:2.11
     - junit:junit:jar:4.8.2
     - log4j:log4j:jar:1.2.17
     - net.java.dev.jets3t:jets3t:jar:0.6.1
@@ -61,6 +61,8 @@ groups:
     - tomcat:jasper-runtime:jar:5.5.23
     - xmlenc:xmlenc:jar:0.52
     artifacts:
+    - jar:jline:jline:jar:2.11:
+        transitive: {}
     - jar:org.apache.hadoop:hadoop-common:jar:2.0.0-cdh4.4.0:
         transitive:
           com.jcraft:jsch:jar:0.1.42: {}
@@ -104,8 +106,7 @@ groups:
           org.codehaus.jackson:jackson-mapper-asl:jar:1.8.8: {}
           tomcat:jasper-runtime:jar:5.5.23: {}
           net.java.dev.jets3t:jets3t:jar:0.6.1: {}
-          org.apache.zookeeper:zookeeper:jar:3.4.5-cdh4.4.0:
-            jline:jline:jar:0.9.94: {}
+          org.apache.zookeeper:zookeeper:jar:3.4.5-cdh4.4.0: {}
           commons-io:commons-io:jar:2.1: {}
           commons-httpclient:commons-httpclient:jar:3.1: {}
           commons-logging:commons-logging:jar:1.1.1: {}
