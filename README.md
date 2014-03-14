@@ -2,6 +2,8 @@
 
 A familiar jRuby hdfs wrapper.
 
+[![Build Status](https://travis-ci.org/tyro89/Viking.png?branch=master)](https://travis-ci.org/tyro89/Viking)
+
 ## Goal
 
 The goal is to provide ways that are similar to the common ruby file system
