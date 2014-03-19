@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    hdfs-viking (0.0.5)
+    hdfs-viking (0.0.7)
       bundler
       lock_jar
       rake
@@ -12,11 +12,8 @@ GEM
     lock_jar (0.8.0)
       naether (~> 0.10.1)
       thor (~> 0.18.1)
-    naether (0.10.1)
-      rjb (~> 1.4.0)
     naether (0.10.1-java)
     rake (10.1.1)
-    rjb (1.4.9)
     thor (0.18.1)
 
 PLATFORMS

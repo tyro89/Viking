@@ -37,7 +37,7 @@ class TestDirInstanceMethods < MiniTest::Unit::TestCase
       entries << entry
     end
 
-    assert [TEST_FILE_1, TEST_FILE_2] == entries
+    assert [TEST_FILE_1, TEST_FILE_2].sort == entries.sort
   end
 
   def test_path
@@ -48,8 +48,7 @@ class TestDirInstanceMethods < MiniTest::Unit::TestCase
   def test_read
     d = Viking::Dir.new(TMP_DIR)
 
-    assert TEST_FILE_1 == d.read
-    assert TEST_FILE_2 == d.read
+    assert [TEST_FILE_1, TEST_FILE_2].sort == [d.read, d.read].sort
     assert d.read.nil?
     assert d.read.nil?
   end
@@ -57,15 +56,13 @@ class TestDirInstanceMethods < MiniTest::Unit::TestCase
   def test_rewind
     d = Viking::Dir.new(TMP_DIR)
 
-    assert TEST_FILE_1 == d.read
-    assert TEST_FILE_2 == d.read
+    assert [TEST_FILE_1, TEST_FILE_2].sort == [d.read, d.read]
     assert d.read.nil?
     assert d.read.nil?
 
     d.rewind
 
-    assert TEST_FILE_1 == d.read
-    assert TEST_FILE_2 == d.read
+    assert [TEST_FILE_1, TEST_FILE_2].sort == [d.read, d.read]
     assert d.read.nil?
     assert d.read.nil?
   end

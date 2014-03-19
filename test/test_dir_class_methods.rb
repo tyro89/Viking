@@ -50,7 +50,7 @@ class TestDirClassMethods < MiniTest::Unit::TestCase
     assert_raises(Errno::ENOENT) { Viking::Dir.delete("#{TMP_DIR}/does-not-exists") }
     assert_raises(Errno::ENOENT) { Viking::Dir.delete(TEST_FILE_PATH_1) }
 
-    assert [TEST_FILE_1, TEST_FILE_2] == Viking::Dir.entries(TMP_DIR)
+    assert [TEST_FILE_1, TEST_FILE_2].sort == Viking::Dir.entries(TMP_DIR).sort
   end
 
   def test_exist?
@@ -70,7 +70,7 @@ class TestDirClassMethods < MiniTest::Unit::TestCase
     Viking::Dir.foreach(TMP_DIR) do |file_name|
       file_names << file_name
     end
-    assert [TEST_FILE_1, TEST_FILE_2] == file_names
+    assert [TEST_FILE_1, TEST_FILE_2].sort == file_names.sort
   end
 
   def test_getwd
