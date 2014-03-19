@@ -14,13 +14,11 @@ module Viking
   DEFAULT_BUFFER_SIZE = 4096
 
   def self.configure(config)
-    hostname     = config[:host]
-    port         = config[:port]
+    path = URI.new("hdfs://#{config[:host]}:#{config[:port]}")
+
     @buffer_size = config[:buffer_size]
+    @client      = DistributedFileSystem.new
 
-    path = URI.new("hdfs://#{hostname}:#{port}")
-
-    @client = DistributedFileSystem.new
     @client.initialize__method(path, Configuration.new)
   end
 
