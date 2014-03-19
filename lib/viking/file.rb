@@ -217,7 +217,7 @@ module Viking
     def writer
       @writer ||= begin
         @writing = true
-        Viking.client.create(Path.new(path))
+        Viking.client.create(Path.new(path), true, Viking.buffer_size)
       end
     end
   end
