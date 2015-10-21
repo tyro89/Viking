@@ -1,19 +1,31 @@
 PATH
   remote: .
   specs:
-    hdfs-viking (0.0.7)
+    hdfs-viking (0.0.8)
       bundler
       lock_jar
+      pry
       rake
 
 GEM
   remote: https://rubygems.org/
   specs:
-    lock_jar (0.8.0)
-      naether (~> 0.10.1)
-      thor (~> 0.18.1)
-    naether (0.10.1-java)
-    rake (10.1.1)
+    coderay (1.1.0)
+    ffi (1.9.8-java)
+    lock_jar (0.10.3)
+      naether (~> 0.13.8)
+      thor (>= 0.18.1)
+    method_source (0.8.2)
+    naether (0.13.8-java)
+    pry (0.10.3-java)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+      spoon (~> 0.0)
+    rake (10.2.1)
+    slop (3.6.0)
+    spoon (0.0.4)
+      ffi
     thor (0.18.1)
 
 PLATFORMS
@@ -22,3 +34,6 @@ PLATFORMS
 
 DEPENDENCIES
   hdfs-viking!
+
+BUNDLED WITH
+   1.10.6
