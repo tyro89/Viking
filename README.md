@@ -29,8 +29,11 @@ hdfs classes.
 
     # Set up hdfs config
     Viking.configure({
-      host: '127.0.0.1',
-      port: 54310
+      path: "hdfs://hadoop-production" # if using HA hadoop
+    })
+
+    Viking.configure({
+      path: "hdfs://namenode.yourcompany.com:8020" # if using a single namenode
     })
 
     # If "/some/data" exists and it is a file then print its content. If it is
